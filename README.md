@@ -7,6 +7,23 @@ Pilot a little yellow sub through a Grand Cayman reef. You'll face fish schools,
 diving gulls and barracuda, with a Kraken boss at the end of each stage. Stages cycle through Morning Reef,
 Sunset Drop-off and Night Dive. A *Moose Works* studio splash plays at launch.
 
+![Title screen](docs/title.png)
+
+| | |
+|---|---|
+| ![Moose Works splash](docs/splash.png) | ![Gameplay with a manta ray](docs/play.png) |
+| ![The Kraken at sunset](docs/boss.png) | ![Night Dive](docs/night.png) |
+
+## Quick install (no compiling)
+
+1. Download `ReefRaider-R36S-v1.0.zip` from the [Releases page](https://github.com/clydesdal/R36S_reefraider/releases).
+2. Unzip it and copy everything inside its `ports/` folder (`Reef Raider.sh` and the `reef/` folder) into the
+   `ports` folder on your card's **EASYROMS** partition.
+3. Put the card back in, restart EmulationStation (or reboot), and launch **Reef Raider** from **Ports**.
+
+Tested on an R36S running ArkOS. The binary needs only SDL2 and glibc 2.27+, so other R36S Linux firmware
+with a Ports menu should work too. If it doesn't start, `ports/reef/log.txt` says why.
+
 ## How it draws
 
 Everything goes through `SDL_Renderer` textures, and nothing is drawn pixel by pixel on the CPU:
